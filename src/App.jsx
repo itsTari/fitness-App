@@ -1,5 +1,6 @@
 import './App.css'
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
+import { Box } from '@mui/material'
 import Main from './layout/Main'
 import Home from './pages/Home'
 import ExerciseDetails from './pages/ExerciseDetails'
@@ -12,9 +13,9 @@ function App() {
     
   </Route>))
   return (
-    <>
-    <RouterProvider router={router}/>
-    </>
+    <Box width='400px' sx={{width: {xl: '1488px'}}} m='auto'>
+      <RouterProvider router={router}/>
+    </Box>
   )
 }
 
