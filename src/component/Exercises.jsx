@@ -1,6 +1,12 @@
-function Exercises(){
+import { useEffect, useState } from "react"
+// import { Pagination } from "@mui/material/Pagination"
+import { Box, Typography, Stack } from "@mui/material"
+import { exerciseOptions, fetchData } from "../utility/fetchData"
+function Exercises({exercises, setExercises, bodyPart}){
     return(
-        <h1>Exercises</h1>
+        <Box id='exercise'>
+
+        </Box>
     )
 }
 export default Exercises
