@@ -4,12 +4,13 @@ function ExercisesCard({exercise}) {
     // console.log(exercise)
   return (
     <>
-      <Link to={`/exercise/${exercise.id}`} className="exercise-card" style={{borderTop:'2px solid red'}}>
-            <img src={exercise.gifUrl} alt={exercise.name} loading="lazy"/>
+      <Link to={`/exercise/${exercise.id}`} className="exercise-card" style={{borderTop:'2px solid red',display:'flex',alignItems:'center', flexDirection:'column',gap:'20px', textDecorationLine:'none'}}>
+            <img src={exercise.gifUrl} alt={exercise.name}/>
             <Stack direction='row' gap='20px'>
-                <Button variant="contained" sx={{color:'#fff', backgroundColor:'#ffa9a9', fontSize:'20px', textDecoration:'none', borderRaduis:'10px'}} >Waist</Button>
-                <Button variant="contained" >Abs</Button>
+                <Button sx={{color:'#fff', backgroundColor:'#ffa9a9', fontSize:'16px', borderRadius:'20px', textTransform:'capitalize'}}>{exercise.bodyPart}</Button>
+                <Button sx={{color:'#fff', backgroundColor:'#fcc757', fontSize:'16px', borderRadius:'20px', textTransform:'capitalize'}} >{exercise.target}</Button>
             </Stack>
+            <Typography ml='25px' color='#000' fontWeight='bold' mt='10px' textTransform='capitalize' fontSize='20px' >{exercise.name}</Typography>
       </Link>
     </>
   )
