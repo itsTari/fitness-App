@@ -1,7 +1,6 @@
 import { Button, Typography, Stack } from "@mui/material"
 import { Link } from "react-router-dom"
 function ExercisesCard({exercise}) {
-    // console.log(exercise)
   return (
     <>
       <Link to={`/exercise/${exercise.id}`} className="exercise-card" style={{borderTop:'2px solid red',display:'flex',alignItems:'center', flexDirection:'column',gap:'20px', textDecorationLine:'none'}}>

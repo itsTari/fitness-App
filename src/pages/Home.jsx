@@ -9,6 +9,7 @@ import { fetchData, exerciseOptions } from '../utility/fetchData'
 function Home(){
     const [exercises, setExercises] = useState([])
     const [bodyPart, setBodyPart] = useState('all')
+    console.log(bodyPart)
     useEffect(()=>{
         const exerciseDataFetch = async()=>{
             const exerciseData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
@@ -21,7 +22,7 @@ function Home(){
         <Box>
             <HeroBanner/>
             <SearchExercises setExercises={setExercises} bodyPart={bodyPart} setBodyPart={setBodyPart} />
-            <Exercises exercises={exercises}  />
+            <Exercises exercises={exercises} setExercises={setExercises} bodyPart={bodyPart}  />
         </Box>
     )
 }
