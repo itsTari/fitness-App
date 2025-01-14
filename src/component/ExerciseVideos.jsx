@@ -3,10 +3,9 @@ import { Stack, Box , Typography } from '@mui/material'
 
 function ExerciseVideos ({youtubeExercise, name}) {
   console.log(youtubeExercise)
-  // if(!youtubeExercise.length) return 'loading....'
   return (
     <Box sx={{marginTop:{lg:'200px', xs:'20px'}, padding:'20px'}}>
-        {/* <Typography variant='h4'>
+         <Typography variant='h4'>
           Watch <span style={{color:'red', textTransform:'capitalize'}}>{name}</span> exercise Video 
         </Typography>
         <Stack>
@@ -15,7 +14,7 @@ function ExerciseVideos ({youtubeExercise, name}) {
                 <img src={item.video.thumbnails[0].url} alt={item.video.title}/>
               </a>
             ))}
-        </Stack> */}
+        </Stack> 
     </Box>
   )
 }

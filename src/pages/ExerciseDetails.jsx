@@ -18,7 +18,6 @@ function ExerciseDetails(){
 
           const youTubeExerciseVideo = await fetchData(`${youTubeVideosUrl}/search?query=${exerciseDetailData.name}`, youtubeOptions)
           setYoutubeExercise(youTubeExerciseVideo.contents)
-          // console.log(youTubeExerciseVideo.contents)
         }
         fetchExercisesData()
   },[id]);
