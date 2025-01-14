@@ -39,7 +39,7 @@ function Details ({exerciseDetail}){
                 <Button color='secondary' sx={{background:'#fff2db', borderRadius:'50%', width:'70px', height:'70px'}}>
                     <img src={items.icons} alt={bodyPart} style={{maxWidth:'40px'}}/>
                 </Button>
-                <Typography>{items.name}</Typography>
+                <Typography textTransform='capitalize'>{items.name}</Typography>
             </Stack>
             ))}
         </Stack>    
